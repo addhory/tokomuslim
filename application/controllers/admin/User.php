@@ -23,6 +23,7 @@ class User extends CI_Controller {
 
 	public function tambah()
 	{
+		//validasi input
 		$valid = $this->form_validation;
 		$valid->set_rules('nama','Nama Lengkap','required',
 			array(	'required'		=>	'%s harus diisi'));
@@ -36,8 +37,11 @@ class User extends CI_Controller {
 					'min_length'	=>	'%s minimal 6 karakter',
 					'max_length'	=>	'%s maksimal 32 karakter',
 					'is_unique'		=>	'%s sudah ada'));
-
+		$valid->set_rules('password','Password','required',
+			array(	'required'		=> '%s Harus diisi'));
+		
 		if ($valid->run()===FALSE) {
+			//end validasi
 		$data = array(	'title'		=> 'Tambah Pengguna',
 						'isi'		=> 'admin/user/tambah'
 					);

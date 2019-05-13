@@ -37,10 +37,21 @@ $nav_produk_mobile	= $this->konfigurasi_model->nav_produk();
 
 			<!-- Header Icon -->
 			<div class="header-icons">
-				<a href="#" class="header-wrapicon1 dis-block">
+							
+				<?php if($this->session->userdata('email')) { ?>
+				<a href="<?php echo base_url('dasbor')?>" class="header-wrapicon1 dis-block">
+					<img src="<?php echo base_url() ?>assets/template/images/icons/icon-header-01.png" class="header-icon1" alt="ICON"> <?php echo $this->session->userdata('nama_pelanggan'); ?> &nbsp;
+				</a>
+				<a href="<?php echo base_url('masuk/logout')?>" class="header-wrapicon1 dis-block">
+					<i class = "fa fa-sign-out"></i> Logout
+				</a>
+				<?php } else{?>
+				
+
+				<a href="<?php echo base_url('registrasi')?>" class="header-wrapicon1 dis-block">
 					<img src="<?php echo base_url() ?>assets/template/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 				</a>
-
+				<?php } ?>
 				<span class="linedivide1"></span>
 
 				<div class="header-wrapicon2">
