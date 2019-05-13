@@ -22,6 +22,7 @@
             <li><a href="<?php echo base_url('admin/kategori') ?>"><i class="fa fa-tags"></i> Kategori Produk</a></li>
           </ul>
         </li>
+        <li><a href="<?php echo base_url('admin/rekening') ?>"><i class="fa fa-dollar text-aqua"></i> <span>DATA REKENING</span></a></li>
 
         <!-- MENU USER -->
         <li class="treeview">

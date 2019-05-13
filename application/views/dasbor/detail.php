@@ -24,6 +24,31 @@
                     <?php 
                     // kalau ada transaksi
                     if($header_transaksi){ ?>
+
+                            <table class ="table table-bordered" >
+                                <thead>
+                                    <tr>
+                                        <th width="20%">KODE TRANSAKSI</th>
+                                        <th>: <?php echo $header_transaksi->kode_transaksi ?></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tanggal</td>
+                                        <td>: <?php echo date('d-m-Y', strtotime($header_transaksi->tanggal_transaksi))?></td>
+                                    </tr>   
+                                    <tr>
+                                        <td>Jumlah total</td>
+                                        <td>: <?php echo $header_transaksi->jumlah_transaksi?></td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Status bayar</td>
+                                        <td>: <?php echo $header_transaksi->status_bayar?></td>
+                                    </tr>  
+                                </tbody>
+                            </table>
+
+
                             <table class ="table table-bordered" width="100%">
                                 <thead>
                                     <tr class="bg-warning">
@@ -33,7 +58,6 @@
                                         <th>JUMLAH</th>
                                         <th>HARGA</th>
                                         <th>SUB TOTAL</th>
-                                        <th>ACTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
