@@ -7,6 +7,8 @@
         <li class="header">MAIN NAVIGATION</li>
         <!-- Menu Dashboar -->
         <li><a href="<?php echo base_url('admin/dasbor') ?>"><i class="fa fa-dashboard text-aqua"></i> <span>DASHBOARD</span></a></li>
+        <!-- Menu Transaksi -->
+        <li><a href="<?php echo base_url('admin/transaksi') ?>"><i class="fa fa-dashboard text-aqua"></i> <span>TRANSAKSI</span></a></li>
         
         <!-- Menu Produk -->
         <li class="treeview">
